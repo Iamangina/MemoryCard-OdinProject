@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import backCard from "./assets/backCard.jpg";
 
 export default function GamePage({ games, setGames, handleCardClick, flipped }) {
 
@@ -48,7 +49,7 @@ export default function GamePage({ games, setGames, handleCardClick, flipped }) 
             <div className="cardFace cardBack">
               <img
                 className="cardImage"
-                src="/backgroundCard.jpg"
+                src={backCard}
                 alt="back"
               />
             </div>
