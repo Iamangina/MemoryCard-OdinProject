@@ -1,4 +1,4 @@
-body{
+#root{
   font-family: "Luckiest Guy", system-ui;;
   margin: 0px;
   background: linear-gradient(125deg, rgb(158, 210, 235) 0%, rgb(158, 210, 235) 45%,
