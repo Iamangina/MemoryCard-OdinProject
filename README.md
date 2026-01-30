@@ -1,16 +1,26 @@
-# React + Vite
+# Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **memory card game** built with **React**, where players try to click on unique game cards without repeating. The game features popular video game titles and images fetched from the RAWG API.  
 
-Currently, two official plugins are available:
+## Features
+- Displays 12 game cards with images and names.
+- Shuffles cards after each click to increase difficulty.
+- Tracks **current score** and **best score**.
+- Ends the game when all cards are correctly clicked once.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+- React (functional components, hooks)
+- CSS for styling
+- RAWG Video Games API
 
-## React Compiler
+## How It Works
+1. Cards are fetched from the RAWG API when the app loads.
+2. Clicking a card flips it and shuffles all cards.
+3. Clicking the same card twice resets the current score.
+4. The game ends when all 12 cards are successfully clicked without repetition.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Components
+- **App.jsx** – Main app logic, state management, and shuffle logic.
+- **GamePage.jsx** – Renders cards and handles click interactions.
+- **Header.jsx** – Displays current and best scores.
+ to start the app locally.
