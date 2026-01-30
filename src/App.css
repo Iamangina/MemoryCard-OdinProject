@@ -1,0 +1,88 @@
+body{
+  font-family: "Luckiest Guy", system-ui;;
+  margin: 0px;
+  background: linear-gradient(125deg, rgb(158, 210, 235) 0%, rgb(158, 210, 235) 45%,
+     rgb(246, 223, 181) 45%, rgb(246, 223, 181) 60%,
+     rgb(243, 158, 132)60%, rgb(243, 158, 132)75%, 
+     rgb(252, 210, 240)75%, rgb(252, 210, 240)100%);
+  height: 100vh;
+}
+
+
+/* Header */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(76, 142, 196);
+  box-shadow: 0 0 5px rgb(50, 59, 84);
+  height: 5em;
+  padding: 0 5em 0 2em;
+  color: white;
+  text-shadow: 0 0 2px rgb(50, 59, 84);
+}
+
+.logo{
+  font-family: "Barrio", system-ui;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+/* Main */
+
+.games{
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+.cardBox {
+  flex: 0 0 calc(100% / 7); 
+  width: 15em;
+  height: 22em;
+  perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform .8s linear;
+  transform-style: preserve-3d;
+}
+
+.cardBox.flipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFace {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardFront {
+  transform: rotateY(0deg);
+  z-index: 2;
+  background-color: rgb(76, 142, 196);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  background-color: rgb(76, 142, 196);
+  z-index: 1;
+}
+
+.cardImage {
+  width: 100%;
+  height: 20em;
+  object-fit: cover;
+}
